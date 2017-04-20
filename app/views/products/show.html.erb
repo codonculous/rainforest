@@ -3,7 +3,7 @@
 <div class="product">
 
 <p class='product-description'>Product Description: <%= @product.description %></p>
-<p class='price'> <%="Price: #{@product.price_in_cents/100.00}" %></p>
+<p class='price'> <%="Price: #{@product.formatted_price}" %></p>
 <%= image_tag(@product.product_img_url,class:'product-img') %>
 <p> <%= link_to 'Edit', edit_product_path(@product) %> | <%= link_to 'Delete', @product %> | <%= link_to 'Back', products_url %></p>
 </div>

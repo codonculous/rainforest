@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-resources :products
 
+
+resources :products
+resources :users, only: [:new, :create]
   # get '/user/login'
 
 

@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+
+ * {
+   box-sizing: border-box;
+
+ }
+
+ body{
+
+  width:95%;
+ }
+
+ .login{
+  float:right;
+  margin:0;
+
+ }

@@ -2,7 +2,7 @@
 <% if @products.count == 0%>
 <h2> There is no products</h2>
 <% else %>
-<h2> There are <%= @products.count %></h2>
+<h2> There are <%= @products.count %> products</h2>
 <% end %>
 
 <div class="product">
@@ -11,10 +11,10 @@
 <% @products.each do |product|%>
 <p class = 'product-name'><%= product.name %></p>
 
-<p class='price'><%="$#{product.price_in_cents/100.00}"%></p>
+<p class='price'><%="$#{product.price_in_cents/100.00}"%></p> <br>
 
 <p class='product-description'><%= product.description%> </p>
 
-<p class='product-img'> <%= link_to image_tag(product.product_url),product %> </p>
+<p> <%= link_to image_tag(product.product_img_url,class:'product-img'), product %> </p>
 <% end %>
 </div>

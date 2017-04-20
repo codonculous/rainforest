@@ -1,2 +1,38 @@
-<h1>Products#edit</h1>
-<p>Find me in app/views/products/edit.html.erb</p>
+<h1>Product: <%= @product.name %></h1>
+
+<div class="product">
+
+<p class='product-description'>Product Description: <%= @product.description %></p>
+<p class='price'> <%="Price: #{@product.price_in_cents/100.00}" %></p>
+<%= image_tag(@product.product_img_url,class:'product-img') %>
+<p> <%= link_to 'Back', products_url %></p>
+</div>
+
+
+<div class="add-product-form">
+
+
+<%= form_for(@product) do |f| %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :price_in_cents %><br />
+    <%= f.number_field :price_in_cents %>
+  </div>
+  <div class="field">
+    <%= f.label :product_img_url %><br />
+    <%= f.text_field :product_img_url %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  <% end %>
+
+</div>

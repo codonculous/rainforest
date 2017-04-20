@@ -9,7 +9,12 @@
 
 
 <% @products.each do |product|%>
-<%= product.name %> <%=product.price_in_cents %>
-<p><%= product.description%> </p>
+<p class = 'product-name'><%= product.name %></p>
+
+<p class='price'><%="$#{product.price_in_cents/100.00}"%></p>
+
+<p class='product-description'><%= product.description%> </p>
+
+<p class='product-img'> <%= link_to image_tag(product.product_url),product %> </p>
 <% end %>
 </div>

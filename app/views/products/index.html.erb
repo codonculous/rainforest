@@ -1,2 +1,15 @@
-<h1>Products#index</h1>
-<p>Find me in app/views/products/index.html.erb</p>
+<h1>Welcome to Rainforest</h1>
+<% if @products.count == 0%>
+<h2> There is no products</h2>
+<% else %>
+<h2> There are <%= @products.count %></h2>
+<% end %>
+
+<div class="product">
+
+
+<% @products.each do |product|%>
+<%= product.name %> <%=product.price_in_cents %>
+<p><%= product.description%> </p>
+<% end %>
+</div>

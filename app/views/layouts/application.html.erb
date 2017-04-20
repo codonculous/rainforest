@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
- <p class = 'login'> Login | <%= link_to 'Sign up', new_user_path %></p>
+ <p class = 'login'> <%= link_to 'Login', new_session_path %> | <%= link_to 'Sign up', new_user_path %></p>
 <%= yield %>
 
 </body>

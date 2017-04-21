@@ -1,4 +1,7 @@
+<% if current_user == false%>
 <p class = 'login'> <%= link_to 'Login', new_session_path %> | <%= link_to 'Sign up', new_user_path %></p>
+<% end %>
+
 <h1>Welcome to Rainforest</h1>
 <% if @products.count == 0%>
 <h2> There is no products</h2>

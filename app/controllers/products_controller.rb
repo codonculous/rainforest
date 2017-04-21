@@ -6,7 +6,9 @@ class ProductsController < ApplicationController
 
   def show
     product_find
-
+    if current_user
+    @review = @product.reviews.build
+    end
   end
 
   def new
